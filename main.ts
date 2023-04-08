@@ -1,8 +1,36 @@
 namespace SpriteKind {
     export const Number = SpriteKind.create()
 }
+function initMatrix () {
+    numbersMatrix = [
+    [
+    0,
+    0,
+    0,
+    0
+    ],
+    [
+    0,
+    0,
+    0,
+    0
+    ],
+    [
+    0,
+    0,
+    0,
+    0
+    ],
+    [
+    0,
+    0,
+    0,
+    0
+    ]
+    ]
+}
 function initTiles () {
-    list = [
+    numbersTiles = [
     sprites.create(assets.image`myImage`, SpriteKind.Number),
     sprites.create(assets.image`myImage0`, SpriteKind.Number),
     sprites.create(assets.image`myImage1`, SpriteKind.Number),
@@ -15,9 +43,9 @@ function initTiles () {
     sprites.create(assets.image`myImage8`, SpriteKind.Number),
     sprites.create(assets.image`myImage9`, SpriteKind.Number)
     ]
-    return list
 }
-let list: Sprite[] = []
-let numbersTiles = initTiles()
+let numbersTiles: Sprite[] = []
+let numbersMatrix: number[][] = []
 scene.setBackgroundColor(3)
+initTiles()
 tiles.setCurrentTilemap(tilemap`level1`)
