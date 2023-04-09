@@ -30,26 +30,7 @@ function initMatrix () {
     ]
 }
 function swipeRight () {
-    for (let row of numbersMatrix) {
-        // remove 0
-        for (let index = 0; index <= 3; index++) {
-            if (row[3 - index] == 0) {
-                row.removeAt(3 - index)
-                row.unshift(0)
-                freeCells += 1
-            }
-        }
-        // merge similar
-        for (let index = 0; index <= 2; index++) {
-            if (row[3 - index] == row[2 - index]) {
-                row[3 - index] = (3 - index) * 2
-                row.removeAt(2 - index)
-                row.unshift(0)
-                freeCells += 1
-            }
-        }
-    }
-    feedMatrix()
+	
 }
 function initTiles () {
     numbersTiles = [
